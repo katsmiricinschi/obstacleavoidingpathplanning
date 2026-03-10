@@ -1,10 +1,79 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: #333;
-    margin: 40px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* header */
+header {
+    background-color: #0066cc; /* Adjust blue shade here */
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* nav bar adjustments */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-h1 {
-    color: #0366d6;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+.nav-icon i {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.nav-icon i:hover {
+    transform: scale(1.1);
+}
+
+/* adjustments for background image */
+.hero-section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    /* Replace 'your-image.jpg' with your actual file path */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('your-image.jpg') no-repeat center center/cover;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.text-box {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
