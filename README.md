@@ -2,8 +2,8 @@
 ### 2026 Senior Capstone Project (Comps)
 
 ## Our Website
-You can view our full project, data visualizations, and final report at:
-**[obstacleavoidingpathplanning.github.io](https://obstacleavoidingpathplanning.github.io)**
+You can view our full project, data visualizations, and technical report at:
+**[katsmiricinschi.github.io/obstacleavoidingpathplanning]([https://obstacleavoidingpathplanning.github.io](https://katsmiricinschi.github.io/obstacleavoidingpathplanning/))**
 
 ## Collaborators
 This project was researched and developed by:
@@ -15,4 +15,4 @@ This project was researched and developed by:
 * **Kat Smiricinschi**
 
 ## Project Summary
-This project involves implementing algorithms such as A star, D star LITE, and DWA using ROS2. This was implemented virtually on the Gazebo Simulator as well as on Turtlebot4.  
+This project involves implementing algorithms such as A star, Jump A star, D star LITE, DWA , and a hybrid of DWA and A star using ROS2. This was implemented virtually on the Gazebo Simulator as well as on Turtlebot4.  
