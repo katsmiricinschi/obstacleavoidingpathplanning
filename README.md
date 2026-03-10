@@ -3,7 +3,7 @@
 
 ## Our Website
 You can view our full project, data visualizations, and technical report at:
-**[katsmiricinschi.github.io/obstacleavoidingpathplanning]([https://obstacleavoidingpathplanning.github.io](https://katsmiricinschi.github.io/obstacleavoidingpathplanning/))**
+**[katsmiricinschi.github.io/obstacleavoidingpathplanning](https://katsmiricinschi.github.io/obstacleavoidingpathplanning/)**
 
 ## Collaborators
 This project was researched and developed by:
