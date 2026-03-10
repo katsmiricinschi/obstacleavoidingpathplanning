@@ -1,18 +1,20 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* header */
+
+/* Header & Navigation */
 header {
-    background-color: #0066cc; /* Adjust blue shade here */
+    background-color: #0066cc; 
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
-/* nav bar adjustments */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -43,37 +45,50 @@ header {
     transform: scale(1.1);
 }
 
-/* adjustments for background image */
+/* HERO SECTION (The Image Area with Title) */
 .hero-section {
-    height: 80vh;
+    height: 70vh; /* Takes up 70% of screen height */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    /* Replace 'your-image.jpg' with your actual file path */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('your-image.jpg') no-repeat center center/cover;
+    /* Replace 'images/your-image.jpg' with your actual path */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('images/your-image.jpg') no-repeat center center/cover;
+    background-color: #808080; /* Fallback grey */
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
-    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2; /* Space between the two lines */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Makes title easier to read */
 }
 
-.hero-content h3 {
+/* CONTENT AREA (The White Area Below) */
+.content-area {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.content-area h3 {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
+    color: #444;
     margin-bottom: 2rem;
 }
 
 .text-box {
-    background: rgba(255, 255, 255, 0.9);
+    background: #ffffff;
     color: #333;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 8px;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
-    line-height: 1.6;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    line-height: 1.8;
+    /* Subtle border and shadow for a clean look */
+    border: 1px solid #eaeaea;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
