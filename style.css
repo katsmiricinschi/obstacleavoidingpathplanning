@@ -53,8 +53,8 @@ header {
     justify-content: center;
     text-align: center;
     color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('images/your-image.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url('images/bg-hero.gif') no-repeat center center/cover;
     background-color: #1a3a5c;
 }
 
@@ -75,7 +75,9 @@ header {
 
 /* PAGE HEADER (for inner pages) */
 .page-header {
-    background: linear-gradient(135deg, #0066cc, #004a99);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('images/bg-header.gif') no-repeat center center/cover;
+    background-color: #004a99;
     color: white;
     padding: 3rem 2rem;
     text-align: center;
@@ -529,6 +531,53 @@ header {
     font-style: italic;
 }
 
+/* PDF VIEWER */
+.pdf-viewer-wrapper {
+    margin-top: 1.25rem;
+    border: 1px solid #d0dcea;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.pdf-viewer-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #0066cc;
+    color: white;
+    padding: 0.6rem 1rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+.pdf-viewer-header i.fa-file-pdf {
+    font-size: 1rem;
+}
+
+.pdf-download-link {
+    margin-left: auto;
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.pdf-download-link:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.pdf-viewer {
+    display: block;
+    width: 100%;
+    height: 780px;
+    border: none;
+    background: #f5f5f5;
+}
+
 /* ABOUT / TEAM MEMBERS */
 .team-grid {
     display: grid;
@@ -603,6 +652,59 @@ header {
 .team-links a:hover {
     color: #004a99;
     transform: scale(1.15);
+}
+
+/* ACKNOWLEDGEMENTS */
+.acknowledgement-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.ack-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: #f4f8ff;
+    border: 1px solid #d0dcea;
+    border-left: 4px solid #0066cc;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+}
+
+.ack-avatar {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    background: linear-gradient(135deg, #0066cc, #004a99);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.ack-info h4 {
+    color: #1a1a2e;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.ack-info h4 a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.ack-info h4 a:hover {
+    text-decoration: underline;
+}
+
+.ack-info p {
+    color: #555;
+    font-size: 0.88rem;
 }
 
 /* FOOTER */
