@@ -5,6 +5,9 @@
 You can view our full project, data visualizations, and technical report at:
 **[katsmiricinschi.github.io/obstacleavoidingpathplanning](https://katsmiricinschi.github.io/obstacleavoidingpathplanning/)**
 
+Ouy code for the project itself can be found here:
+**[github.com/Raccoonee/obstacle-avoidance-comps](https://github.com/Raccoonee/obstacle-avoidance-comps)**
+
 ## Collaborators
 This project was researched and developed by:
 * **Oliver Black-Johnston**
