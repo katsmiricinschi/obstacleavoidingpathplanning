@@ -2,7 +2,7 @@
 ### 2026 Senior Capstone Project (Comps)
 
 ## Our Website
-You can view our full project, data visualizations, and technical report at:
+You can view our full project, data visualizations, and technical report at: <br />
 **[katsmiricinschi.github.io/obstacleavoidingpathplanning](https://katsmiricinschi.github.io/obstacleavoidingpathplanning/)**
 
 Our code for the project itself can be found here: <br />
