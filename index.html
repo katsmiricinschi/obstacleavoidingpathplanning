@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Deep Dive into Static and Dynamic Pathfinding For Turtlebot4</title>
+    <title>Obstacle Avoiding Path Planning — Overview</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,11 +12,11 @@
     <header>
         <nav class="navbar">
             <div class="nav-links">
-                <a href="#overview">Overview</a>
-                <a href="#demos">Demo/Videos</a>
-                <a href="#results">Results/Data</a>
-                <a href="#sources">Sources</a>
-                <a href="#about">About</a>
+                <a href="index.html">Overview</a>
+                <a href="demos.html">Demo/Videos</a>
+                <a href="results.html">Results/Data</a>
+                <a href="sources.html">Sources</a>
+                <a href="about.html">About</a>
             </div>
             <div class="nav-icon">
                 <a href="https://github.com/Raccoonee/obstacle-avoidance-comps" target="_blank" title="GitHub Repository">
@@ -27,20 +27,174 @@
     </header>
 
     <main>
+
+        <!-- HERO -->
         <section class="hero-section">
             <div class="hero-content">
-                <h1>A Deep Dive into Static and Dynamic <br> Pathfinding For Turtlebot4</h1>
-                <h3>TBD Subheading</h3>
+                <h1>A Deep Dive into Static and Dynamic<br>Pathfinding for TurtleBot4</h1>
+                <h3>2026 Senior Capstone Project &mdash; Carleton College</h3>
             </div>
         </section>
 
-        <section class="content-area">
-            
+        <!-- PROJECT OVERVIEW -->
+        <section class="section">
+            <h2 class="section-title">Project Overview</h2>
+            <hr class="section-divider">
             <div class="text-box">
-                <p>TBD</p>
+                <p>
+                    This project explores obstacle avoidance and autonomous navigation on the TurtleBot4 robotic platform
+                    using ROS 2. We implement, tune, and compare five distinct navigation algorithms — ranging from
+                    classical graph-search planners to reactive local controllers — to understand their trade-offs in
+                    real-world and simulated environments.
+                </p>
+                <br>
+                <p>
+                    Each algorithm was tested in the Gazebo simulator and on a physical TurtleBot4 navigating custom
+                    maze-style environments. We evaluate performance across metrics including path optimality, computation
+                    time, obstacle clearance, and robustness to dynamic obstacles.
+                </p>
+                <br>
+                <p>
+                    The stack is built on <strong>ROS 2 Jazzy / Humble</strong>, leveraging Nav2, AMCL localization,
+                    SLAM Toolbox, and TF2. All algorithm source code is available in our
+                    <a href="https://github.com/Raccoonee/obstacle-avoidance-comps" target="_blank">GitHub repository</a>.
+                </p>
             </div>
         </section>
+
+        <!-- ALGORITHMS -->
+        <section class="section">
+            <div class="section-inner">
+                <h2 class="section-title">Algorithms</h2>
+                <hr class="section-divider">
+                <p class="section-subtitle">Five navigation approaches — two global planners, one dynamic replanner, one reactive controller, and a hybrid stack.</p>
+
+                <div class="algorithm-scroll">
+
+                    <!-- A* -->
+                    <div class="algorithm-row">
+                        <div class="algo-row-label">
+                            <span class="algo-tag">Global Planner</span>
+                            <h3>A* (A-Star)</h3>
+                        </div>
+                        <div class="algo-row-content">
+                            <p>
+                                A* is a heuristic-guided graph search algorithm that finds the shortest path from a start
+                                to a goal on a 2D occupancy grid. It combines the cost-to-reach (g) with an admissible
+                                heuristic estimate (h) to efficiently prioritize promising nodes.
+                            </p>
+                            <ul class="algo-features">
+                                <li>Optimal path on uniform-cost grids</li>
+                                <li>Euclidean heuristic for grid navigation</li>
+                                <li>Hybrid obstacle inflation for safety margins</li>
+                                <li>Pure pursuit waypoint following</li>
+                                <li>Standalone or planner-only mode (for stacking with DWA)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- D* Lite -->
+                    <div class="algorithm-row">
+                        <div class="algo-row-label">
+                            <span class="algo-tag dynamic">Dynamic Replanner</span>
+                            <h3>D* Lite</h3>
+                        </div>
+                        <div class="algo-row-content">
+                            <p>
+                                D* Lite is an incremental heuristic search algorithm derived from Lifelong Planning A*.
+                                It searches backwards from the goal, enabling efficient replanning when new obstacles
+                                are detected — ideal for partially-known or changing environments.
+                            </p>
+                            <ul class="algo-features">
+                                <li>Incremental replanning without full recomputation</li>
+                                <li>SLAM integration for map updates</li>
+                                <li>LiDAR-based dynamic obstacle detection</li>
+                                <li>Automatic replanning on obstacle discovery</li>
+                                <li>Real-time path visualization</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Jump Point Search -->
+                    <div class="algorithm-row">
+                        <div class="algo-row-label">
+                            <span class="algo-tag">Global Planner</span>
+                            <h3>Jump Point Search (JPS)</h3>
+                        </div>
+                        <div class="algo-row-content">
+                            <p>
+                                Jump Point Search is an optimization of A* for uniform-cost grids. It dramatically
+                                reduces the node expansion count by identifying and skipping symmetrical paths,
+                                jumping directly to "jump points" that are guaranteed to be on optimal paths.
+                            </p>
+                            <ul class="algo-features">
+                                <li>Significantly faster than standard A* on open grids</li>
+                                <li>Same optimal path guarantees as A*</li>
+                                <li>Forced neighbor pruning rules</li>
+                                <li>Interactive goal input via terminal</li>
+                                <li>Real-time visualizer for jump point expansion</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- DWA -->
+                    <div class="algorithm-row">
+                        <div class="algo-row-label">
+                            <span class="algo-tag reactive">Reactive Controller</span>
+                            <h3>DWA (Dynamic Window Approach)</h3>
+                        </div>
+                        <div class="algo-row-content">
+                            <p>
+                                The Dynamic Window Approach is a reactive local planner that samples the robot's
+                                velocity space within a kinematically-feasible window, simulates candidate trajectories,
+                                and selects the trajectory with the best combined cost score.
+                            </p>
+                            <ul class="algo-features">
+                                <li>Real-time local obstacle avoidance</li>
+                                <li>Configurable cost weights (goal, obstacle, velocity, smoothness)</li>
+                                <li>Emergency stop on critical proximity</li>
+                                <li>TF2/AMCL localization integration</li>
+                                <li>Standalone or local-controller mode (stacked with A*)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Hybrid -->
+                    <div class="algorithm-row">
+                        <div class="algo-row-label">
+                            <span class="algo-tag hybrid">Hybrid Stack</span>
+                            <h3>Hybrid A* + DWA</h3>
+                        </div>
+                        <div class="algo-row-content">
+                            <p>
+                                The hybrid approach combines A* as a global planner with DWA as a local controller,
+                                mirroring the Nav2 planner/controller architecture. A* computes the optimal global
+                                path; DWA executes it in real time while avoiding obstacles.
+                            </p>
+                            <ul class="algo-features">
+                                <li>Global optimality from A* path planning</li>
+                                <li>Real-time obstacle reactivity from DWA</li>
+                                <li>Path-tracking cost terms guide DWA along A* plan</li>
+                                <li>Lookahead carrot-following for smooth execution</li>
+                                <li>Mirrors ROS 2 Nav2 planner/controller split</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <footer>
+        <p>
+            2026 Senior Capstone &mdash; Carleton College &nbsp;|&nbsp;
+            <a href="https://github.com/Raccoonee/obstacle-avoidance-comps" target="_blank">GitHub</a>
+            &nbsp;|&nbsp;
+            <a href="https://katsmiricinschi.github.io/obstacleavoidingpathplanning/" target="_blank">Project Site</a>
+        </p>
+    </footer>
 
 </body>
 </html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obstacle Avoiding Path Planning — Results / Data</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="demos.html">Demo/Videos</a>
+                <a href="results.html">Results/Data</a>
+                <a href="sources.html">Sources</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-icon">
+                <a href="https://github.com/Raccoonee/obstacle-avoidance-comps" target="_blank" title="GitHub Repository">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-header">
+            <h1>Results / Data</h1>
+            <p>Comparative performance metrics across all five algorithms</p>
+        </div>
+
+        <!-- RESULTS TABLE -->
+        <section class="section">
+            <h2 class="section-title">Performance Comparison</h2>
+            <hr class="section-divider">
+            <p class="section-subtitle">Results collected from physical TurtleBot4 and Gazebo simulation runs. All values are averages across repeated trials.</p>
+
+            <div class="results-table-wrapper">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Algorithm</th>
+                            <th>Environment</th>
+                            <th>Avg. Path Length (m)</th>
+                            <th>Avg. Time to Goal (s)</th>
+                            <th>Plan Time (ms)</th>
+                            <th>Obstacle Clearance (m)</th>
+                            <th>Success Rate (%)</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- A* Rows -->
+                        <tr>
+                            <td class="algo-label">A*</td>
+                            <td>Simulation</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td class="algo-label">A*</td>
+                            <td>Physical</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <!-- D* Lite Rows -->
+                        <tr>
+                            <td class="algo-label">D* Lite</td>
+                            <td>Simulation</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td class="algo-label">D* Lite</td>
+                            <td>Physical</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <!-- JPS Rows -->
+                        <tr>
+                            <td class="algo-label">JPS</td>
+                            <td>Simulation</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td class="algo-label">JPS</td>
+                            <td>Physical</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <!-- DWA Rows -->
+                        <tr>
+                            <td class="algo-label">DWA</td>
+                            <td>Simulation</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td class="algo-label">DWA</td>
+                            <td>Physical</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <!-- Hybrid Rows -->
+                        <tr>
+                            <td class="algo-label">Hybrid (A* + DWA)</td>
+                            <td>Simulation</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td class="algo-label">Hybrid (A* + DWA)</td>
+                            <td>Physical</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                            <td>TBD</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- PROS AND CONS -->
+        <section class="section-alt">
+            <div class="section-inner">
+                <h2 class="section-title">Pros &amp; Cons</h2>
+                <hr class="section-divider">
+                <p class="section-subtitle">Qualitative trade-offs observed across all five algorithms.</p>
+
+                <div class="algorithm-scroll">
+
+                    <!-- A* -->
+                    <div class="algorithm-row">
+                        <div class="algo-row-label">
+                            <span class="algo-tag">Global Planner</span>
+                            <h3>A* (A-Star)</h3>
+                        </div>
+                        <div class="algo-row-content pros-cons-inline">
+                            <div>
+                                <strong class="pros-heading">Pros</strong>
+                                <ul class="pros-list">
+                                    <li>Guaranteed optimal path</li>
+                                    <li>Predictable, deterministic behavior</li>
+                                    <li>Well-understood and well-documented</li>
+                                    <li>Can stack with local planners (DWA)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="cons-heading">Cons</strong>
+                                <ul class="cons-list">
+                                    <li>No dynamic replanning — must restart on new obstacles</li>
+                                    <li>Can be slow on very large maps</li>
+                                    <li>Requires fully-known map before planning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- D* Lite -->
+                    <div class="algorithm-row">
+                        <div class="algo-row-label">
+                            <span class="algo-tag dynamic">Dynamic Replanner</span>
+                            <h3>D* Lite</h3>
+                        </div>
+                        <div class="algo-row-content pros-cons-inline">
+                            <div>
+                                <strong class="pros-heading">Pros</strong>
+                                <ul class="pros-list">
+                                    <li>Efficient incremental replanning</li>
+                                    <li>Handles dynamic and unknown environments</li>
+                                    <li>Only recomputes affected path segments</li>
+                                    <li>Strong performance in partially-known maps</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="cons-heading">Cons</strong>
+                                <ul class="cons-list">
+                                    <li>More complex to implement and tune</li>
+                                    <li>Higher overhead than A* in static environments</li>
+                                    <li>Can produce non-smooth paths</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JPS -->
+                    <div class="algorithm-row">
+                        <div class="algo-row-label">
+                            <span class="algo-tag">Global Planner</span>
+                            <h3>Jump Point Search (JPS)</h3>
+                        </div>
+                        <div class="algo-row-content pros-cons-inline">
+                            <div>
+                                <strong class="pros-heading">Pros</strong>
+                                <ul class="pros-list">
+                                    <li>Much faster than A* on open uniform grids</li>
+                                    <li>Same path optimality as A*</li>
+                                    <li>Dramatic reduction in node expansions</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="cons-heading">Cons</strong>
+                                <ul class="cons-list">
+                                    <li>Only works correctly on uniform-cost grids</li>
+                                    <li>No dynamic replanning support</li>
+                                    <li>Benefits diminish on densely-occupied maps</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DWA -->
+                    <div class="algorithm-row">
+                        <div class="algo-row-label">
+                            <span class="algo-tag reactive">Reactive Controller</span>
+                            <h3>DWA (Dynamic Window Approach)</h3>
+                        </div>
+                        <div class="algo-row-content pros-cons-inline">
+                            <div>
+                                <strong class="pros-heading">Pros</strong>
+                                <ul class="pros-list">
+                                    <li>Reactive real-time obstacle avoidance</li>
+                                    <li>Respects robot kinematic constraints</li>
+                                    <li>Configurable cost function for tuning behavior</li>
+                                    <li>No prior map required (reactive only)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="cons-heading">Cons</strong>
+                                <ul class="cons-list">
+                                    <li>Can get stuck in local minima</li>
+                                    <li>No global path optimality guarantees</li>
+                                    <li>Sensitive to weight tuning</li>
+                                    <li>May struggle in narrow corridors</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hybrid -->
+                    <div class="algorithm-row">
+                        <div class="algo-row-label">
+                            <span class="algo-tag hybrid">Hybrid Stack</span>
+                            <h3>Hybrid A* + DWA</h3>
+                        </div>
+                        <div class="algo-row-content pros-cons-inline">
+                            <div>
+                                <strong class="pros-heading">Pros</strong>
+                                <ul class="pros-list">
+                                    <li>Global optimality + local reactivity</li>
+                                    <li>Handles dynamic obstacles along planned path</li>
+                                    <li>Mirrors production Nav2 architecture</li>
+                                    <li>More robust than either alone</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="cons-heading">Cons</strong>
+                                <ul class="cons-list">
+                                    <li>Higher system complexity and tuning overhead</li>
+                                    <li>Two nodes must coordinate correctly</li>
+                                    <li>DWA may deviate from A* plan in cluttered spaces</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            2026 Senior Capstone &mdash; Carleton College &nbsp;|&nbsp;
+            <a href="https://github.com/Raccoonee/obstacle-avoidance-comps" target="_blank">GitHub</a>
+            &nbsp;|&nbsp;
+            <a href="https://katsmiricinschi.github.io/obstacleavoidingpathplanning/" target="_blank">Project Site</a>
+        </p>
+    </footer>
+
+</body>
+</html>

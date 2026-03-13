@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obstacle Avoiding Path Planning — Sources</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Overview</a>
+                <a href="demos.html">Demo/Videos</a>
+                <a href="results.html">Results/Data</a>
+                <a href="sources.html">Sources</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-icon">
+                <a href="https://github.com/Raccoonee/obstacle-avoidance-comps" target="_blank" title="GitHub Repository">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-header">
+            <h1>Sources</h1>
+            <p>Literature review, algorithm references, and documentation links</p>
+        </div>
+
+        <section class="section">
+            <div class="sources-section">
+
+                <!-- LITERATURE REVIEW -->
+                <div class="source-group">
+                    <h3><i class="fas fa-book-open"></i> Literature Review</h3>
+
+                    <div class="lit-review-box">
+                        <h4>A* Search Algorithm</h4>
+                        <p>
+                            Hart, P. E., Nilsson, N. J., &amp; Raphael, B. (1968). A formal basis for the heuristic determination
+                            of minimum cost paths. <em>IEEE Transactions on Systems Science and Cybernetics, 4</em>(2), 100–107.
+                            The original paper introducing the A* algorithm and its heuristic admissibility conditions.
+                        </p>
+                        <p class="authors">Hart, Nilsson, Raphael &mdash; 1968</p>
+                    </div>
+
+                    <div class="lit-review-box">
+                        <h4>D* Lite — Incremental Heuristic Search</h4>
+                        <p>
+                            Koenig, S., &amp; Likhachev, M. (2002). D* Lite. <em>Proceedings of the AAAI Conference on Artificial
+                            Intelligence</em>, 476–483. D* Lite is a simplified version of D* that uses Lifelong Planning A*
+                            to efficiently replan paths when the robot's map changes during navigation.
+                        </p>
+                        <p class="authors">Koenig, Likhachev &mdash; AAAI 2002</p>
+                    </div>
+
+                    <div class="lit-review-box">
+                        <h4>Jump Point Search</h4>
+                        <p>
+                            Harabor, D., &amp; Grastien, A. (2011). Online graph pruning for pathfinding on grid maps.
+                            <em>Proceedings of the AAAI Conference on Artificial Intelligence</em>, 1114–1119.
+                            Introduces Jump Point Search, which prunes symmetrical paths in uniform-cost grids to
+                            accelerate A* by orders of magnitude.
+                        </p>
+                        <p class="authors">Harabor, Grastien &mdash; AAAI 2011</p>
+                    </div>
+
+                    <div class="lit-review-box">
+                        <h4>Dynamic Window Approach</h4>
+                        <p>
+                            Fox, D., Burgard, W., &amp; Thrun, S. (1997). The dynamic window approach to collision avoidance.
+                            <em>IEEE Robotics &amp; Automation Magazine, 4</em>(1), 23–33.
+                            The foundational paper for DWA, describing velocity-space sampling with kinematic constraints
+                            for reactive local navigation.
+                        </p>
+                        <p class="authors">Fox, Burgard, Thrun &mdash; IEEE RA Magazine 1997</p>
+                    </div>
+
+                    <div class="lit-review-box">
+                        <h4>Literature Review Paper</h4>
+                        <p>
+                            [Placeholder — add your team's literature review paper here. Include title, authors, abstract
+                            summary, and a link to the PDF or published version.]
+                        </p>
+                        <p class="authors">TBD &mdash; 2026</p>
+                    </div>
+                </div>
+
+                <!-- PROJECT CODE -->
+                <div class="source-group">
+                    <h3><i class="fab fa-github"></i> Project Code &amp; Repository</h3>
+                    <ul class="source-list">
+                        <li>
+                            <a href="https://github.com/Raccoonee/obstacle-avoidance-comps" target="_blank">
+                                obstacle-avoidance-comps — GitHub
+                            </a>
+                            <span class="source-desc">
+                                Main project repository containing all ROS 2 algorithm packages: A*, D* Lite, JPS,
+                                DWA, and the Hybrid A* + DWA stack. Includes launch files, parameter configs, and map files.
+                            </span>
+                        </li>
+                        <li>
+                            <a href="https://katsmiricinschi.github.io/obstacleavoidingpathplanning/" target="_blank">
+                                Project Website
+                            </a>
+                            <span class="source-desc">
+                                This project site with overviews, video demos, and results data.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ROS 2 -->
+                <div class="source-group">
+                    <h3><i class="fas fa-robot"></i> ROS 2 Documentation</h3>
+                    <ul class="source-list">
+                        <li>
+                            <a href="https://docs.ros.org/en/jazzy/index.html" target="_blank">
+                                ROS 2 Jazzy Documentation
+                            </a>
+                            <span class="source-desc">
+                                Official documentation for ROS 2 Jazzy Jalisco — the primary ROS 2 distribution used in this project.
+                                Covers installation, core concepts, topic/service/action communication, and TF2.
+                            </span>
+                        </li>
+                        <li>
+                            <a href="https://docs.ros.org/en/humble/index.html" target="_blank">
+                                ROS 2 Humble Documentation
+                            </a>
+                            <span class="source-desc">
+                                Documentation for ROS 2 Humble Hawksbill (LTS). This project also supports Humble — swap
+                                <code>jazzy</code> for <code>humble</code> in all commands.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Nav2 -->
+                <div class="source-group">
+                    <h3><i class="fas fa-map-marked-alt"></i> Nav2 Documentation</h3>
+                    <ul class="source-list">
+                        <li>
+                            <a href="https://docs.nav2.org/" target="_blank">
+                                Nav2 — The ROS 2 Navigation Stack
+                            </a>
+                            <span class="source-desc">
+                                The Nav2 project provides a complete navigation system for ROS 2 robots, including
+                                global planners, local controllers (DWA-based), costmaps, AMCL localization, and behavior trees.
+                                Our Hybrid stack mirrors the Nav2 planner/controller architecture.
+                            </span>
+                        </li>
+                        <li>
+                            <a href="https://docs.nav2.org/configuration/packages/configuring-dwb-controller.html" target="_blank">
+                                Nav2 — DWB Local Planner Configuration
+                            </a>
+                            <span class="source-desc">
+                                Reference for Nav2's DWB (Dynamic Window Base) local planner — the production version of DWA.
+                                Useful for comparing our custom DWA parameters against the Nav2 defaults.
+                            </span>
+                        </li>
+                        <li>
+                            <a href="https://docs.nav2.org/configuration/packages/configuring-navfn-planner.html" target="_blank">
+                                Nav2 — NavFn (A*) Global Planner Configuration
+                            </a>
+                            <span class="source-desc">
+                                Nav2's NavFn global planner implements Dijkstra's algorithm and A*. Reference for comparing
+                                our custom A* implementation with the Nav2 baseline.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- TurtleBot4 -->
+                <div class="source-group">
+                    <h3><i class="fas fa-cog"></i> TurtleBot4 Documentation</h3>
+                    <ul class="source-list">
+                        <li>
+                            <a href="https://turtlebot.github.io/turtlebot4-user-manual/" target="_blank">
+                                TurtleBot4 User Manual
+                            </a>
+                            <span class="source-desc">
+                                Official documentation for the TurtleBot4 platform — covers hardware setup, out-of-box
+                                experience, networking (Discovery Server), and integration with ROS 2 Nav2.
+                            </span>
+                        </li>
+                        <li>
+                            <a href="https://turtlebot.github.io/turtlebot4-user-manual/tutorials/navigation.html" target="_blank">
+                                TurtleBot4 — Navigation Tutorial
+                            </a>
+                            <span class="source-desc">
+                                Step-by-step guide for running SLAM, saving maps, and using Nav2 navigation with
+                                the TurtleBot4. Basis for our experiment workflow.
+                            </span>
+                        </li>
+                        <li>
+                            <a href="https://github.com/turtlebot/turtlebot4" target="_blank">
+                                TurtleBot4 — GitHub Repository
+                            </a>
+                            <span class="source-desc">
+                                Official TurtleBot4 ROS 2 packages including turtlebot4_navigation, turtlebot4_viz,
+                                turtlebot4_gz_bringup (Gazebo), and configuration files used in our project.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SLAM -->
+                <div class="source-group">
+                    <h3><i class="fas fa-map"></i> SLAM &amp; Localization</h3>
+                    <ul class="source-list">
+                        <li>
+                            <a href="https://docs.nav2.org/tutorials/docs/navigation2_with_slam.html" target="_blank">
+                                Nav2 — Navigation with SLAM Toolbox
+                            </a>
+                            <span class="source-desc">
+                                Guide for using SLAM Toolbox to build maps with TurtleBot4 in ROS 2, which we used to
+                                generate all maze and corridor maps for our experiments.
+                            </span>
+                        </li>
+                        <li>
+                            <a href="https://docs.nav2.org/configuration/packages/configuring-amcl.html" target="_blank">
+                                Nav2 — AMCL Localization Configuration
+                            </a>
+                            <span class="source-desc">
+                                Reference for the Adaptive Monte Carlo Localization (AMCL) node used in all our
+                                physical robot experiments. Our custom <code>amcl_params.yaml</code> auto-initializes
+                                the map frame at startup.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            2026 Senior Capstone &mdash; Carleton College &nbsp;|&nbsp;
+            <a href="https://github.com/Raccoonee/obstacle-avoidance-comps" target="_blank">GitHub</a>
+            &nbsp;|&nbsp;
+            <a href="https://katsmiricinschi.github.io/obstacleavoidingpathplanning/" target="_blank">Project Site</a>
+        </p>
+    </footer>
+
+</body>
+</html>
