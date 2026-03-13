@@ -37,131 +37,182 @@
         <section class="section">
             <h2 class="section-title">Performance Comparison</h2>
             <hr class="section-divider">
-            <p class="section-subtitle">Results collected from physical TurtleBot4 and Gazebo simulation runs. All values are averages across repeated trials.</p>
+            <p class="section-subtitle">Results collected from Gazebo simulation runs across simple and complex maze environments with static, added, and removed obstacles.</p>
 
             <div class="results-table-wrapper">
                 <table class="results-table">
                     <thead>
                         <tr>
-                            <th>Algorithm</th>
                             <th>Environment</th>
-                            <th>Avg. Path Length (m)</th>
-                            <th>Avg. Time to Goal (s)</th>
-                            <th>Plan Time (ms)</th>
-                            <th>Obstacle Clearance (m)</th>
-                            <th>Success Rate (%)</th>
-                            <th>Notes</th>
+                            <th>Obstacle Type</th>
+                            <th>Algorithm</th>
+                            <th>Time (s)</th>
+                            <th>Distance (m)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- A* Rows -->
+                        <!-- Simple / Static -->
+                        <tr class="group-header"><td colspan="5">Simple Environment</td></tr>
                         <tr>
+                            <td>Simple</td><td>Static</td>
                             <td class="algo-label">A*</td>
-                            <td>Simulation</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
+                            <td>40.43</td><td>4.04</td>
                         </tr>
                         <tr>
+                            <td>Simple</td><td>Static</td>
+                            <td class="algo-label">D* Lite</td>
+                            <td>40.1</td><td>4.19</td>
+                        </tr>
+                        <tr>
+                            <td>Simple</td><td>Static</td>
+                            <td class="algo-label">Jump A*</td>
+                            <td>39.64</td><td>4.10</td>
+                        </tr>
+                        <tr>
+                            <td>Simple</td><td>Static</td>
+                            <td class="algo-label">DWA (w costmap)</td>
+                            <td>14.98</td><td>3.88</td>
+                        </tr>
+                        <tr>
+                            <td>Simple</td><td>Static</td>
+                            <td class="algo-label">Hybrid</td>
+                            <td>15.34</td><td>3.93</td>
+                        </tr>
+                        <!-- Simple / Add -->
+                        <tr>
+                            <td>Simple</td><td>Add</td>
                             <td class="algo-label">A*</td>
-                            <td>Physical</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
+                            <td class="fail">FAIL</td><td class="fail">FAIL</td>
                         </tr>
-                        <!-- D* Lite Rows -->
                         <tr>
+                            <td>Simple</td><td>Add</td>
                             <td class="algo-label">D* Lite</td>
-                            <td>Simulation</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
+                            <td>49.24</td><td>4.23</td>
                         </tr>
                         <tr>
+                            <td>Simple</td><td>Add</td>
+                            <td class="algo-label">Jump A*</td>
+                            <td class="fail">FAIL</td><td class="fail">FAIL</td>
+                        </tr>
+                        <tr>
+                            <td>Simple</td><td>Add</td>
+                            <td class="algo-label">DWA (w costmap)</td>
+                            <td>15.79</td><td>3.83</td>
+                        </tr>
+                        <tr>
+                            <td>Simple</td><td>Add</td>
+                            <td class="algo-label">Hybrid</td>
+                            <td>15.34</td><td>3.86</td>
+                        </tr>
+                        <!-- Simple / Remove -->
+                        <tr>
+                            <td>Simple</td><td>Remove</td>
+                            <td class="algo-label">A*</td>
+                            <td>40.91</td><td>4.14</td>
+                        </tr>
+                        <tr>
+                            <td>Simple</td><td>Remove</td>
                             <td class="algo-label">D* Lite</td>
-                            <td>Physical</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                        </tr>
-                        <!-- JPS Rows -->
-                        <tr>
-                            <td class="algo-label">JPS</td>
-                            <td>Simulation</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
+                            <td>50.22</td><td>4.11</td>
                         </tr>
                         <tr>
-                            <td class="algo-label">JPS</td>
-                            <td>Physical</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                        </tr>
-                        <!-- DWA Rows -->
-                        <tr>
-                            <td class="algo-label">DWA</td>
-                            <td>Simulation</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
+                            <td>Simple</td><td>Remove</td>
+                            <td class="algo-label">Jump A*</td>
+                            <td>39.01</td><td>4.19</td>
                         </tr>
                         <tr>
-                            <td class="algo-label">DWA</td>
-                            <td>Physical</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                        </tr>
-                        <!-- Hybrid Rows -->
-                        <tr>
-                            <td class="algo-label">Hybrid (A* + DWA)</td>
-                            <td>Simulation</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
+                            <td>Simple</td><td>Remove</td>
+                            <td class="algo-label">DWA (w costmap)</td>
+                            <td>14.81</td><td>3.73</td>
                         </tr>
                         <tr>
-                            <td class="algo-label">Hybrid (A* + DWA)</td>
-                            <td>Physical</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
+                            <td>Simple</td><td>Remove</td>
+                            <td class="algo-label">Hybrid</td>
+                            <td>15.12</td><td>3.88</td>
+                        </tr>
+                        <!-- Complex / Static -->
+                        <tr class="group-header"><td colspan="5">Complex Environment</td></tr>
+                        <tr>
+                            <td>Complex</td><td>Static</td>
+                            <td class="algo-label">A*</td>
+                            <td>44.89</td><td>4.75</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Static</td>
+                            <td class="algo-label">D* Lite</td>
+                            <td>64.8</td><td>4.88</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Static</td>
+                            <td class="algo-label">Jump A*</td>
+                            <td>47.82</td><td>5.17</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Static</td>
+                            <td class="algo-label">DWA (w costmap)</td>
+                            <td class="fail">FAIL</td><td class="fail">FAIL</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Static</td>
+                            <td class="algo-label">Hybrid</td>
+                            <td>18.9</td><td>4.59</td>
+                        </tr>
+                        <!-- Complex / Add -->
+                        <tr>
+                            <td>Complex</td><td>Add</td>
+                            <td class="algo-label">A*</td>
+                            <td class="fail-partial">44.63 *</td><td class="fail-partial">4.26 *</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Add</td>
+                            <td class="algo-label">D* Lite</td>
+                            <td>73.2</td><td>5.51</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Add</td>
+                            <td class="algo-label">Jump A*</td>
+                            <td class="fail">FAIL</td><td class="fail">FAIL</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Add</td>
+                            <td class="algo-label">DWA (w costmap)</td>
+                            <td class="fail">FAIL</td><td class="fail">FAIL</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Add</td>
+                            <td class="algo-label">Hybrid</td>
+                            <td class="fail">FAIL</td><td class="fail">FAIL</td>
+                        </tr>
+                        <!-- Complex / Remove -->
+                        <tr>
+                            <td>Complex</td><td>Remove</td>
+                            <td class="algo-label">A*</td>
+                            <td>41.38</td><td>4.67</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Remove</td>
+                            <td class="algo-label">D* Lite</td>
+                            <td>59.96</td><td>5.02</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Remove</td>
+                            <td class="algo-label">Jump A*</td>
+                            <td>51.15</td><td>5.19</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Remove</td>
+                            <td class="algo-label">DWA (w costmap)</td>
+                            <td>14.54</td><td>3.42</td>
+                        </tr>
+                        <tr>
+                            <td>Complex</td><td>Remove</td>
+                            <td class="algo-label">Hybrid</td>
+                            <td>18.56</td><td>4.54</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <p style="color:#888; font-size:0.85rem; margin-top:0.75rem;">* A* Complex/Add partially succeeded on one run — value reflects that run only.</p>
         </section>
 
         <!-- PROS AND CONS -->

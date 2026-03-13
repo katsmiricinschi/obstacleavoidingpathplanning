@@ -362,6 +362,26 @@ header {
     color: #0066cc;
 }
 
+.results-table .fail {
+    color: #cc2200;
+    font-weight: 600;
+}
+
+.results-table .fail-partial {
+    color: #b87000;
+    font-weight: 600;
+}
+
+.results-table .group-header td {
+    background: #e8f0fb;
+    color: #0066cc;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.5rem 1.2rem;
+}
+
 /* PROS CONS */
 .pros-cons-grid {
     display: grid;
