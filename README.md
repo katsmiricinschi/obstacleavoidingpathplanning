@@ -5,7 +5,7 @@
 You can view our full project, data visualizations, and technical report at:
 **[katsmiricinschi.github.io/obstacleavoidingpathplanning](https://katsmiricinschi.github.io/obstacleavoidingpathplanning/)**
 
-Ouy code for the project itself can be found here:
+Our code for the project itself can be found here:__
 **[github.com/Raccoonee/obstacle-avoidance-comps](https://github.com/Raccoonee/obstacle-avoidance-comps)**
 
 ## Collaborators
